@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>How many players?</h1>
+        </div>
+    </div>
+    <div class="row choose-players">
+        <div class="col-xs-12 form-group">
+            <input id="players_count" type="text" class="form-control input-lg" placeholder="Number of Players">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 form-group">
+            <button type="button" class="btn btn-primary btn-lg btn-play">Lets Play!</button>
+        </div>
+    </div>
+</div>
