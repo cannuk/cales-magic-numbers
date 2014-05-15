@@ -129,3 +129,40 @@ body{
     transform:         translateY(-40px);
 
 }
+
+.scores-bar-container{
+    list-style-type: none;
+}
+.scores-bar-container li{
+    display: inline-block;
+    position: relative;
+}
+
+.scores-bar-container li .score-complete, .scores-bar-container li .score-abbr{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    white-space: nowrap;
+    -webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;
+}
+
+.scores-bar-container li .score-complete{
+    width: 0px;
+    opacity: 0;
+}
+
+.scores-bar-container li .score-abbr{
+    width: auto;
+    opacity: 1;
+}
+
+.scores-bar-container li.active .score-complete{
+    width: auto;
+    opacity: 1;
+    background-color: #fff;
+}
+
+.scores-bar-container li.active .score-abbr{
+    width: 0px;
+    opacity: 0;
+}

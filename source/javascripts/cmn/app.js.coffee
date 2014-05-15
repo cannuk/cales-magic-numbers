@@ -7,6 +7,7 @@ game = new Backbone.Marionette.Application();
 
 game.addRegions
   main: ".main"
+  scores: ".scores-container"
 
 game.showView = (view) ->
   @main.show(view)
@@ -29,6 +30,8 @@ game.createPlayers = (options) ->
   @players = new CMN.Players
   @players.generate(playersCount) if playersCount
   @players.setActivePlayer()
+  scoresBar = new CMN.Views.ScoresBar(collection: @players)
+  @scores.show scoresBar
 
 
 #Models and Collections
