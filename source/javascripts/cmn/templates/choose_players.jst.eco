@@ -1,16 +1,24 @@
-<div class="container">
+<div class="game-title-container">
+    <h1>Cale's</h1>
+    <h2>Magic Numbers!</h2>
+</div>
+
+<div class="choose-players-container">
     <div class="row">
         <div class="col-md-12">
-            <h1>How many players?</h1>
+            <h3>How many players?</h3>
         </div>
     </div>
     <div class="row choose-players">
-        <div class="col-xs-12 form-group">
-            <input id="players_count" type="text" class="form-control input-lg" placeholder="Number of Players">
+        <div>
+            <button class="players-count" value="1">1</button>
+            <button class="players-count" value="2">2</button>
+            <button class="players-count" value="3">3</button>
+            <button class="players-count" value="4">4</button>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 form-group">
+        <div class="col-xs-12 form-group submit-wrapper">
             <button type="button" class="btn btn-primary btn-lg btn-play">Lets Play!</button>
         </div>
     </div>

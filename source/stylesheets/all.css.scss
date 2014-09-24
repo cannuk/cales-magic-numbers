@@ -3,13 +3,82 @@
 @import "iconmoon.css";
 @import "animations.css";
 @charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 
 
 
 body{
-    background-color: #70bbd9;
-    overflow: hidden;
+  background-color: #70bbd9;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.game-title-container{
+  position: absolute;
+  left: 50%;
+  margin-left: -225px;
+  background-color: #fa565a;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  border: 8px solid #FFF;
+  padding: 30px;
+  text-align: center;
+
+  h1{
+    font-size: 64px;
+    margin-bottom: 5px;
+    font-family: 'Londrina Outline', cursive;
+  }
+  h2{
+    font-size: 35px;
+    margin-top: 5px;
+    font-weight: 300;
+  }
+}
+
+
+.choose-players-container{
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  border-radius: 50%;
+  width: 300px;
+  background: #c94548;
+  border: 8px solid #FFF;
+  padding: 30px;
+
+  h3 {
+    color: white;
+  }
+
+  button.players-count{
+    outline: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #fa565a;
+    color: #c94548;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #c94548;
+    display: inline-block;
+  }
+  button.players-count:focus{
+    border-color: #FFF;
+  }
+
+  .submit-wrapper{
+    margin-top: 20px;
+  }
+  
 }
 
 
@@ -130,18 +199,27 @@ body{
 
 }
 
+.nav-container{
+    margin-bottom: 55px;
+}
+
+.scores-container{
+    position: fixed;
+    right: 0px;
+}
+
 .scores-bar-container{
     list-style-type: none;
 }
 .scores-bar-container li{
     display: inline-block;
     position: relative;
+    white-space: nowrap;
+    padding: 15px;
 }
 
 .scores-bar-container li .score-complete, .scores-bar-container li .score-abbr{
-    position: absolute;
-    top:0px;
-    left: 0px;
+    display: inline-block;
     white-space: nowrap;
     -webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;transition: all .3s ease-in-out;
 }
@@ -154,6 +232,11 @@ body{
 .scores-bar-container li .score-abbr{
     width: auto;
     opacity: 1;
+}
+
+.scores-bar-container li.active{
+    background-color: #FFF;
+    border-radius: 0 0 4px 4px;
 }
 
 .scores-bar-container li.active .score-complete{

@@ -5,6 +5,9 @@
 
 game = new Backbone.Marionette.Application();
 
+game.currPlayer = 0
+game._WINNING_SCORE = 21
+
 game.addRegions
   main: ".main"
   scores: ".scores-container"
@@ -30,8 +33,21 @@ game.createPlayers = (options) ->
   @players = new CMN.Players
   @players.generate(playersCount) if playersCount
   @players.setActivePlayer()
-  scoresBar = new CMN.Views.ScoresBar(collection: @players)
-  @scores.show scoresBar
+  @scoresBar = new CMN.Views.ScoresBar(collection: @players)
+  @scores.show @scoresBar
+
+game.changePlayer = ->
+  @players.setActivePlayer()
+
+
+game.getCurrentPlayer = ->
+  @players.getActivePlayer()
+
+game.updatePlayerScore = (e) ->
+  points = e.model.get("number")
+  player = @getCurrentPlayer()
+  score = player.get("score") + points
+  player.set("score", score)
 
 
 #Models and Collections
@@ -44,6 +60,16 @@ game.addInitializer (options) ->
   @selectPlayersView.on "playersselected", @createPlayers, this
   @selectPlayersView.on "playersselected", @createEnvelopes, this
   @envelopesView = new CMN.Views.Envelopes(collection: @envelopes)
+  @envelopesView.on "itemview:envelope:open", @updatePlayerScore, this
+  @envelopesView.on "itemview:envelope:click", @envelopeClick, this
+#  @envelopesView.on "itemview:envelope:open", (e, f) -> console.debug(e); console.debug(f)
+
+game.envelopeClick = (e, f) ->
+  player = @getCurrentPlayer()
+  if player.get("score") < @_WINNING_SCORE and e.model.get("action") is "negative"
+#    show an error message
+  else
+    e.model.set("open", true)
 
 game.addInitializer (options) ->
   @selectPlayers()

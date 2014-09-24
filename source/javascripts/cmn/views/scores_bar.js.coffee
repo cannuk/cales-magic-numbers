@@ -5,4 +5,8 @@ class CMN.Views.ScoresBar extends Backbone.Marionette.CollectionView
   tagName: "ul"
   className: "scores-bar-container"
 
-  initialize: ->
+
+
+
+
+
