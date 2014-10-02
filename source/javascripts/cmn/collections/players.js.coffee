@@ -21,7 +21,7 @@ class CMN.Players extends Backbone.Collection
 #   set the current active to false
     @at(@activePlayer).set("active", false) if @activePlayer >= 0
 #   increment the activePlayer index
-    if (@activePlayer + 1) > @length
+    if (@activePlayer + 1) >= @length
       @activePlayer = 0
     else
       @activePlayer++

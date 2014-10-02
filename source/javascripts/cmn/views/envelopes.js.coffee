@@ -15,6 +15,7 @@ class CMN.Views.Envelopes extends Backbone.Marionette.CollectionView
     e = {}
     e.w = Math.floor ((w)/col)
     e.h = Math.floor ((h)/row)
+    e.h = 150 if e.h > 150
     s = document.createElement("style")
     s.type = "text/css"
     s.innerHTML = ".envelope{height: #{e.h}px; width: #{e.w}px;}

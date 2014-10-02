@@ -1,3 +1,4 @@
+@import "normalize";
 @import "bootstrap.css";
 @import "bootflat.css";
 @import "iconmoon.css";
@@ -40,6 +41,74 @@ body{
     margin-top: 5px;
     font-weight: 300;
   }
+}
+
+.success-message-container{
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 80px;
+  z-index: 2000;
+  position: fixed;
+  -webkit-transition: all .2s ease-in;-moz-transition: all .2s ease-in;-ms-transition: all .2s ease-in;-o-transition: all .2s ease-in;transition: all .2s ease-in;
+  text-align: center;
+}
+.success-message-container.visible{
+  opacity: 1;
+}
+
+.answer-modal-container{
+  position: fixed;
+  left: 50%;
+  width: 450px;
+  margin-left: -225px;
+  background: #FFF;
+  height: 450px;
+  display: none;
+  z-index: 1000;
+  top: 15px;
+  padding: 20px;
+
+
+  .answer-modal{
+    font-size: 80px;
+    width: 80%;
+    margin: 0 auto;
+
+
+    .answer-form-container{
+      display: block;
+      text-align: right;
+
+      .total{
+        border-top: 2px solid #434a54;
+        padding-top: 10px;
+      }
+
+      input{
+        text-align: right;
+        font-size: 80px;
+        border: 0;
+        border: 1px solid #EFEFEF;
+        background: #FAFAFA;
+        border-radius: 2px;
+        padding: 1px;
+        line-height: 80px;
+        height: auto;
+      }
+      input.correct{
+        background-color: lightgreen;
+      }
+      input.incorrect{
+        background-color: lightcoral;
+      }
+
+    }
+
+  }
+
 }
 
 

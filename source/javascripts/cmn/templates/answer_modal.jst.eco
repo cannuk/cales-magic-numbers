@@ -1,0 +1,19 @@
+<div class="answer-form-container">
+    <div>
+        <span class="current-score"><%=@score%></span>
+    </div>
+    <div>
+        <span class="symbol"><%=@operator%></span>
+        <span class="points"><%=@points%></span>
+    </div>
+    <div class="total row">
+        <div class="pull-right">
+            <input class="form-control" type="text" id="total_answer"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="">
+            <button class="btn btn-answer">Answer</button>
+        </div>
+    </div>
+</div>
