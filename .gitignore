@@ -10,7 +10,7 @@
 # Ignore the build directory
 /build
 /.cache
-.idea
+/.idea
 
 # Ignore Sass' cache
 /.sass-cache
