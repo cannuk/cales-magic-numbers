@@ -16,6 +16,9 @@ _successMessages = [
   "You got it!"
 ]
 
+_WINNING_MESSAGE = "Congratulations you win!"
+_messageTimeout = null
+
 game.addRegions
   main: ".main"
   scores: ".scores-container"
@@ -26,12 +29,15 @@ game.showView = (view) ->
 
 
 game.showSuccessMessage =  ->
-  message = _successMessages[Math.floor(Math.random() * _successMessages.length)]
+  @showMessage(_successMessages[Math.floor(Math.random() * _successMessages.length)])
+
+game.showMessage = (message, visibleTime = 1700) ->
   $("h1.success-message-text").html(message)
   $(".success-message-container").addClass("visible")
-  setTimeout((=>
+  clearTimeout(_messageTimeout)
+  _messageTimeout = setTimeout((=>
     $(".success-message-container").removeClass("visible")
-  ), 1700)
+  ), visibleTime)
 
 
 
@@ -44,8 +50,20 @@ game.showEnvelopes = ->
 
 game.createEnvelopes = (options) ->
   players = options.players
-  @showEnvelopes()
-  @envelopes.generate(players) if players
+  if players
+    @envelopes.reset(@generateEnvelopes())
+    @showEnvelopes()
+
+game.generateEnvelopes =  () ->
+  envelopes = []
+  total = 15
+  while envelopes.length < total
+    envelopes.push {action: "positive"}
+  total += 15
+  while envelopes.length < total
+    envelopes.push {action: "negative"}
+  envelopes = _.shuffle(envelopes)
+
 
 
 game.createPlayers = (options) ->
@@ -72,12 +90,7 @@ game.updatePlayerScore = (model) ->
 
 game.checkForWinner = ->
   player = @getCurrentPlayer()
-  if player.get("score") == _WINNING_SCORE
-    alert("YOU WON!!!")
-    true
-  else
-    false
-
+  player.get("score") == _WINNING_SCORE
 
 game.onResize = ->
   @envelopesView.setEnvelopeSize()
@@ -86,6 +99,7 @@ game.onResize = ->
 #Models and Collections
 game.addInitializer (options) ->
   @envelopes = new CMN.Envelopes()
+  @envelopes.on "envelopes:opened", @generateEnvelopes, this
 
 #Views
 game.addInitializer (options) ->
@@ -94,7 +108,6 @@ game.addInitializer (options) ->
   @selectPlayersView.on "playersselected", @createEnvelopes, this
   @envelopesView = new CMN.Views.Envelopes(collection: @envelopes)
   @envelopesView.on "itemview:envelope:open", @showAnswerModal, this
-  @envelopesView.on "itemview:envelope:open", @checkForWinner, this
   @envelopesView.on "itemview:envelope:click", @envelopeClick, this
 #  @envelopesView.on "itemview:envelope:open", (e, f) -> console.debug(e); console.debug(f)
 
@@ -104,9 +117,9 @@ game.addInitializer (options) ->
 game.envelopeClick = (e, f) ->
   player = @getCurrentPlayer()
   if player.get("score") < _WINNING_SCORE and e.model.get("action") is "negative"
-#    show an error message
+    @showMessage("Choose a <i class=\"icon icon-plus-outline\"></i> envelope", 2000)
   else if player.get("score") > _WINNING_SCORE and e.model.get("action") is "positive"
-#    show another error message about being over winning score
+    @showMessage("Choose a <i class=\"icon icon-minus-outline\"></i> envelope", 2000)
   else
     e.model.set("open", true)
 
@@ -123,7 +136,10 @@ game.showAnswerModal = (envelope) ->
     @answerModal.$el.css("display", "none")
     @updatePlayerScore(scoreModel)
     winner = @checkForWinner()
-    unless winner
+    if winner
+      @showMessage(_WINNING_MESSAGE)
+      setTimeout((=> @selectPlayers()), 3000)
+    else
       @showSuccessMessage()
       @changePlayer()
 
@@ -134,6 +150,10 @@ game.showAnswerModal = (envelope) ->
 
 game.addInitializer (options) ->
   @selectPlayers()
+
+game.restart = ->
+  @selectPlaers()
+  @scores.close()
 
 
 CMN.game = game

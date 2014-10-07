@@ -47,14 +47,22 @@ body{
   pointer-events: none;
   opacity: 0;
   top: 0;
-  margin: 0 auto;
+  margin: 00px auto;
   width: 100%;
   font-size: 80px;
   z-index: 2000;
   position: fixed;
   -webkit-transition: all .2s ease-in;-moz-transition: all .2s ease-in;-ms-transition: all .2s ease-in;-o-transition: all .2s ease-in;transition: all .2s ease-in;
   text-align: center;
+
+  .success-message-text{
+    margin-top: 20%;
+  }
+
+
 }
+
+
 .success-message-container.visible{
   opacity: 1;
 }

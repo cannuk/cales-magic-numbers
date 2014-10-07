@@ -9,21 +9,12 @@ class CMN.Envelopes extends Backbone.Collection
 
 
   changeOpen: ->
-    opened = @select((envelope) => envelope.get("open") == true)
-    console.log "open = #{opened.length} @length = #{@length}"
-    opened.length == @length
+    negativeOpened = @select((envelope) => envelope.get("open") == true and envelope.get("action") is "negative")
+    positiveOpened = @select((envelope) => envelope.get("open") == true and envelope.get("action") is "positive")
+    console.log "negativeOpened = #{negativeOpened.length} @length = #{@length}"
+    console.log "positiveOpened = #{positiveOpened.length} @length = #{@length}"
+    @trigger "envelopes:opened" if negativeOpened.length == (@length/2) or positiveOpened.length == (@length/2)
 
-
-  generate: () ->
-    envelopes = []
-    total = 15
-    while envelopes.length < total
-      envelopes.push new CMN.Envelope(action: "positive")
-    total += 15
-    while envelopes.length < total
-      envelopes.push new CMN.Envelope(action: "negative")
-    envelopes = _.shuffle(envelopes)
-    @add envelopes
 
 
 
