@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RUBY_MODULE" version="4">
   <component name="CompassSettings">
-    <option name="compassExecutableFilePath" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@gobstopper/gems/compass-0.12.2/bin/compass" />
+    <option name="compassExecutableFilePath" value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p194@gobstopper/gems/compass-0.12.4/bin/compass" />
     <option name="compassSupportEnabled" value="true" />
   </component>
   <component name="NewModuleRootManager">
@@ -9,11 +9,14 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.17, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.3.2.2, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chunky_png (v1.3.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.7.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="compass (v0.12.4, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="eco (v1.0.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="eco-source (v1.1.0.rc.1, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="em-websocket (v0.5.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.3, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v1.4.0, RVM: ruby-1.9.3-p194 [gobstopper]) [gem]" level="application" />
