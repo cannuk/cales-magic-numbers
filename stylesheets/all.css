@@ -1,0 +1,662 @@
+/*! normalize.css v2.0.1 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 8/9.
+ */
+@import url(bootstrap.css);
+@import url(bootflat.css);
+@import url(iconmoon.css);
+@import url(animations.css);
+@import url(http://fonts.googleapis.com/css?family=Londrina+Outline);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+/* line 22, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/*
+ * Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 8/9.
+ */
+/* line 50, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Sets default font family to sans-serif.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Removes default margin.
+ */
+/* line 74, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+/* line 108, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+h1 {
+  font-size: 2em; }
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 116, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 125, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bold; }
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 133, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 141, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 154, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 163, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * Sets consistent quote types.
+ */
+/* line 173, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 181, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 190, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 197, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+sup {
+  top: -0.5em; }
+
+/* line 201, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+/* line 213, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+img {
+  border: 0; }
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 221, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 233, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 245, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 256, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 270, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 282, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+button,
+input {
+  line-height: normal; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 297, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 307, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+/* line 317, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 328, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 341, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+/* line 350, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 360, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 373, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 13, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+body {
+  background-color: #70bbd9;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Open Sans', sans-serif; }
+
+/* line 22, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.game-title-container {
+  position: absolute;
+  left: 50%;
+  margin-left: -225px;
+  background-color: #fa565a;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  border: 8px solid #FFF;
+  padding: 30px;
+  text-align: center; }
+  /* line 34, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .game-title-container h1 {
+    font-size: 64px;
+    margin-bottom: 5px;
+    font-family: 'Londrina Outline', cursive; }
+  /* line 39, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .game-title-container h2 {
+    font-size: 35px;
+    margin-top: 5px;
+    font-weight: 300; }
+
+/* line 46, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.success-message-container {
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  margin: 00px auto;
+  width: 100%;
+  font-size: 80px;
+  z-index: 2000;
+  position: fixed;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  text-align: center; }
+  /* line 58, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .success-message-container .success-message-text {
+    margin-top: 20%; }
+
+/* line 66, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.success-message-container.visible {
+  opacity: 1; }
+
+/* line 70, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.answer-modal-container {
+  position: fixed;
+  left: 50%;
+  width: 450px;
+  margin-left: -225px;
+  background: #FFF;
+  height: 450px;
+  display: none;
+  z-index: 1000;
+  top: 15px;
+  padding: 20px; }
+  /* line 83, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .answer-modal-container .answer-modal {
+    font-size: 80px;
+    width: 80%;
+    margin: 0 auto; }
+    /* line 89, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+    .answer-modal-container .answer-modal .answer-form-container {
+      display: block;
+      text-align: right; }
+      /* line 93, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      .answer-modal-container .answer-modal .answer-form-container .total {
+        border-top: 2px solid #434a54;
+        padding-top: 10px; }
+      /* line 98, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      .answer-modal-container .answer-modal .answer-form-container input {
+        text-align: right;
+        font-size: 80px;
+        border: 0;
+        border: 1px solid #EFEFEF;
+        background: #FAFAFA;
+        border-radius: 2px;
+        padding: 1px;
+        line-height: 80px;
+        height: auto; }
+      /* line 109, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      .answer-modal-container .answer-modal .answer-form-container input.correct {
+        background-color: lightgreen; }
+      /* line 112, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      .answer-modal-container .answer-modal .answer-form-container input.incorrect {
+        background-color: lightcoral; }
+
+/* line 123, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.choose-players-container {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+  border-radius: 50%;
+  width: 300px;
+  background: #c94548;
+  border: 8px solid #FFF;
+  padding: 30px; }
+  /* line 135, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .choose-players-container h3 {
+    color: white; }
+  /* line 139, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .choose-players-container button.players-count {
+    outline: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: #fa565a;
+    color: #c94548;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #c94548;
+    display: inline-block; }
+  /* line 151, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .choose-players-container button.players-count:focus {
+    border-color: #FFF; }
+  /* line 155, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  .choose-players-container .submit-wrapper {
+    margin-top: 20px; }
+
+/* line 163, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelopes-container {
+  margin: 0 auto;
+  text-align: center; }
+
+/* line 169, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelopes-container .envelope-wrapper {
+  display: inline-block;
+  margin: 25px 8px; }
+
+/* line 174, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  width: 98px;
+  height: 66px;
+  background: #c94548;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 0 1px #c94548 inset; }
+
+/* line 188, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope .flap,
+.envelope:after {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  width: 0;
+  left: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-width: 33px 49px; }
+
+/* line 198, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope .flap {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-top-color: #fa565a;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: rotateX(0deg);
+  -webkit-transform-origin: top; }
+
+/* line 206, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope:after {
+  border-right-color: #F75357;
+  border-left-color: #fa565a;
+  border-bottom-color: #fa565a;
+  top: 1px;
+  border-radius: 0 0 5px 5px;
+  transform: rotate(360deg);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  z-index: 1; }
+
+/* line 217, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope .icon {
+  color: #E13D41;
+  position: absolute;
+  bottom: 5px;
+  z-index: 2;
+  font-size: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center; }
+
+/* line 228, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope.open .flap {
+  -webkit-transform: rotateX(180deg);
+  border-top-color: #F55155;
+  z-index: 0; }
+
+/* line 234, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope.open .icon-plus-outline:before {
+  content: "\e600"; }
+
+/* line 239, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope.open .icon-minus-outline:before {
+  content: "\e601"; }
+
+/* line 243, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope .paper {
+  position: absolute;
+  background-color: #fff;
+  top: 12px;
+  left: 5px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  height: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  transition-delay: 200ms;
+  -webkit-transition-delay: 400ms; }
+
+/* line 263, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope .paper h6 {
+  font-size: 24px;
+  color: #434a54; }
+
+/* line 269, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.envelope.open .paper {
+  z-index: 1;
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px); }
+
+/* line 279, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.nav-container {
+  margin-bottom: 55px; }
+
+/* line 283, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-container {
+  position: fixed;
+  right: 0px; }
+
+/* line 288, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container {
+  list-style-type: none; }
+
+/* line 291, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  padding: 15px; }
+
+/* line 298, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li .score-complete, .scores-bar-container li .score-abbr {
+  display: inline-block;
+  white-space: nowrap;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+/* line 304, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li .score-complete {
+  width: 0px;
+  opacity: 0; }
+
+/* line 309, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li .score-abbr {
+  width: auto;
+  opacity: 1; }
+
+/* line 314, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li.active {
+  background-color: #FFF;
+  border-radius: 0 0 4px 4px; }
+
+/* line 319, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li.active .score-complete {
+  width: auto;
+  opacity: 1;
+  background-color: #fff; }
+
+/* line 325, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li.active .score-abbr {
+  width: 0px;
+  opacity: 0; }
