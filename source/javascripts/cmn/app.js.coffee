@@ -16,8 +16,8 @@ _successMessages = [
   "You got it!"
 ]
 
-_WINNING_MESSAGE = "Congratulations you win!"
 _messageTimeout = null
+_answerModalOpen = false
 
 game.addRegions
   main: ".main"
@@ -48,9 +48,7 @@ game.showEnvelopes = ->
   @main.show @envelopesView
   window.scrollTo(0,0)
 
-game.createEnvelopes = (options) ->
-  players = options.players
-  if players
+game.createEnvelopes = () ->
     @envelopes.reset(@generateEnvelopes())
     @showEnvelopes()
 
@@ -99,7 +97,6 @@ game.onResize = ->
 #Models and Collections
 game.addInitializer (options) ->
   @envelopes = new CMN.Envelopes()
-  @envelopes.on "envelopes:opened", @generateEnvelopes, this
 
 #Views
 game.addInitializer (options) ->
@@ -115,6 +112,7 @@ game.addInitializer (options) ->
   $(window).resize(@onResize(), this)
 
 game.envelopeClick = (e, f) ->
+  return if _answerModalOpen
   player = @getCurrentPlayer()
   if player.get("score") < _WINNING_SCORE and e.model.get("action") is "negative"
     @showMessage("Choose a <i class=\"icon icon-plus-outline\"></i> envelope", 2000)
@@ -133,17 +131,25 @@ game.showAnswerModal = (envelope) ->
   @answerModalView = new CMN.Views.AnswerModal(model: scoreModel)
   @answerModalView.on "answer:correct", (=>
     @answerModal.close
+    _answerModalOpen = false
+#   Check if all the + or - envelopes are open. If so, regenerate.
+    @createEnvelopes() if @envelopes.allOpen()
     @answerModal.$el.css("display", "none")
     @updatePlayerScore(scoreModel)
     winner = @checkForWinner()
     if winner
+      player = @getCurrentPlayer()
+      _WINNING_MESSAGE = "Congratulations #{player.get("name")}, You Win!"
       @showMessage(_WINNING_MESSAGE)
-      setTimeout((=> @selectPlayers()), 3000)
+      setTimeout((=>
+        @restart()
+      ), 3000)
     else
       @showSuccessMessage()
       @changePlayer()
 
   )
+  _answerModalOpen = true
   @answerModal.show @answerModalView
   @answerModal.$el.css("display", "block")
 
@@ -152,7 +158,10 @@ game.addInitializer (options) ->
   @selectPlayers()
 
 game.restart = ->
-  @selectPlaers()
+  @selectPlayersView = new CMN.Views.ChoosePlayers()
+  @selectPlayersView.on "playersselected", @createPlayers, this
+  @selectPlayersView.on "playersselected", @createEnvelopes, this
+  @selectPlayers()
   @scores.close()
 
 

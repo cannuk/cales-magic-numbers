@@ -21,6 +21,7 @@ class CMN.Views.Envelopes extends Backbone.Marionette.CollectionView
     s.innerHTML = ".envelope{height: #{e.h}px; width: #{e.w}px;}
       .envelope .flap,.envelope:after{border-width: #{Math.round(e.h/2)}px #{Math.round(e.w/2)}px}
       .envelope .paper{ width: #{Math.round(e.w - 12)}px; height: #{e.h-20}px; }
+      .envelopes-container .envelope-wrapper{ margin-top: #{(Math.round(e.h/2)+1)}px}
       "
     $("body").append($(s))
 
