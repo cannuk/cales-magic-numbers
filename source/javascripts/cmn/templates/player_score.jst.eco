@@ -1,2 +1,1 @@
-<div class="score-complete"><%="#{@playerName}: #{@score}"%></div>
-<div class="score-abbr"><%="P#{@playerNumber}: #{@score}"%></div>
+<div class="score-complete"><%="#{@playerName}: #{@score}"%> points</div>

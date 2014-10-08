@@ -12,8 +12,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="">
-            <button class="btn btn-answer">Answer</button>
+        <div class="btn-answer-wrapper">
+            <button class="btn btn-lg btn-primary btn-answer">Answer</button>
         </div>
     </div>
 </div>
