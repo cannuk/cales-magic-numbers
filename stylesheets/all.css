@@ -353,14 +353,14 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 13, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 11, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 body {
   background-color: #70bbd9;
   overflow: hidden;
   position: relative;
   font-family: 'Open Sans', sans-serif; }
 
-/* line 22, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 19, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .game-title-container {
   position: absolute;
   left: 50%;
@@ -372,18 +372,18 @@ body {
   border: 8px solid #FFF;
   padding: 30px;
   text-align: center; }
-  /* line 34, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 31, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .game-title-container h1 {
     font-size: 64px;
     margin-bottom: 5px;
     font-family: 'Londrina Outline', cursive; }
-  /* line 39, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 36, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .game-title-container h2 {
     font-size: 35px;
     margin-top: 5px;
     font-weight: 300; }
 
-/* line 46, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 43, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .success-message-container {
   pointer-events: none;
   opacity: 0;
@@ -399,40 +399,44 @@ body {
   -o-transition: all .2s ease-in;
   transition: all .2s ease-in;
   text-align: center; }
-  /* line 58, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 59, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .success-message-container .success-message-text {
     margin-top: 20%; }
 
-/* line 66, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 65, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .success-message-container.visible {
   opacity: 1; }
 
-/* line 70, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 69, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .answer-modal-container {
   position: fixed;
   left: 50%;
   width: 450px;
   margin-left: -225px;
   background: #FFF;
-  height: 450px;
   display: none;
   z-index: 1000;
   top: 15px;
-  padding: 20px; }
-  /* line 83, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  padding: 20px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4); }
+  /* line 82, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .answer-modal-container .answer-modal {
     font-size: 80px;
     width: 80%;
     margin: 0 auto; }
-    /* line 89, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+    /* line 87, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+    .answer-modal-container .answer-modal .btn-answer-wrapper {
+      text-align: center; }
+    /* line 91, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
     .answer-modal-container .answer-modal .answer-form-container {
       display: block;
       text-align: right; }
-      /* line 93, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      /* line 95, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
       .answer-modal-container .answer-modal .answer-form-container .total {
         border-top: 2px solid #434a54;
         padding-top: 10px; }
-      /* line 98, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      /* line 100, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
       .answer-modal-container .answer-modal .answer-form-container input {
         text-align: right;
         font-size: 80px;
@@ -443,14 +447,14 @@ body {
         padding: 1px;
         line-height: 80px;
         height: auto; }
-      /* line 109, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      /* line 111, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
       .answer-modal-container .answer-modal .answer-form-container input.correct {
         background-color: lightgreen; }
-      /* line 112, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+      /* line 114, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
       .answer-modal-container .answer-modal .answer-form-container input.incorrect {
         background-color: lightcoral; }
 
-/* line 123, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 124, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .choose-players-container {
   position: absolute;
   top: 250px;
@@ -462,10 +466,10 @@ body {
   background: #c94548;
   border: 8px solid #FFF;
   padding: 30px; }
-  /* line 135, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 136, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .choose-players-container h3 {
     color: white; }
-  /* line 139, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 140, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .choose-players-container button.players-count {
     outline: none;
     border-radius: 50%;
@@ -477,30 +481,30 @@ body {
     margin: 0 auto;
     border: 1px solid #c94548;
     display: inline-block; }
-  /* line 151, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 152, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .choose-players-container button.players-count:focus {
     border-color: #FFF; }
-  /* line 155, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+  /* line 156, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
   .choose-players-container .submit-wrapper {
     margin-top: 20px; }
 
-/* line 163, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 162, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelopes-container {
   margin: 0 auto;
   text-align: center; }
 
-/* line 169, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 168, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelopes-container .envelope-wrapper {
   display: inline-block;
   margin: 25px 8px; }
 
-/* line 174, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 173, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope {
   -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   cursor: pointer;
   position: relative;
   margin: 0 auto;
@@ -510,7 +514,7 @@ body {
   border-radius: 0 0 5px 5px;
   box-shadow: 0 0 1px #c94548 inset; }
 
-/* line 188, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 190, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope .flap,
 .envelope:after {
   pointer-events: none;
@@ -522,20 +526,20 @@ body {
   border: 0 solid transparent;
   border-width: 33px 49px; }
 
-/* line 198, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 201, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope .flap {
   -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   border-top-color: #fa565a;
   top: 0px;
   left: 0px;
   -webkit-transform: rotateX(0deg);
   -webkit-transform-origin: top; }
 
-/* line 206, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 214, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope:after {
   border-right-color: #F75357;
   border-left-color: #fa565a;
@@ -543,10 +547,11 @@ body {
   top: 1px;
   border-radius: 0 0 5px 5px;
   transform: rotate(360deg);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   z-index: 1; }
 
-/* line 217, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 226, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope .icon {
   color: #E13D41;
   position: absolute;
@@ -557,21 +562,21 @@ body {
   left: 0;
   text-align: center; }
 
-/* line 228, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 237, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope.open .flap {
   -webkit-transform: rotateX(180deg);
   border-top-color: #F55155;
   z-index: 0; }
 
-/* line 234, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 243, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope.open .icon-plus-outline:before {
   content: "\e600"; }
 
-/* line 239, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 247, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope.open .icon-minus-outline:before {
   content: "\e601"; }
 
-/* line 243, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 251, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope .paper {
   position: absolute;
   background-color: #fff;
@@ -591,12 +596,12 @@ body {
   transition-delay: 200ms;
   -webkit-transition-delay: 400ms; }
 
-/* line 263, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 271, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope .paper h6 {
   font-size: 24px;
   color: #434a54; }
 
-/* line 269, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 276, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .envelope.open .paper {
   z-index: 1;
   -webkit-transform: translateY(-40px);
@@ -605,58 +610,43 @@ body {
   -o-transform: translateY(-40px);
   transform: translateY(-40px); }
 
-/* line 279, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 286, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .nav-container {
   margin-bottom: 55px; }
 
-/* line 283, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 290, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .scores-container {
   position: fixed;
   right: 0px; }
 
-/* line 288, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 295, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .scores-bar-container {
   list-style-type: none; }
 
-/* line 291, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 299, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .scores-bar-container li {
-  display: inline-block;
-  position: relative;
-  white-space: nowrap;
-  padding: 15px; }
-
-/* line 298, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
-.scores-bar-container li .score-complete, .scores-bar-container li .score-abbr {
-  display: inline-block;
-  white-space: nowrap;
+  font-size: 20px;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0); }
 
-/* line 304, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
-.scores-bar-container li .score-complete {
-  width: 0px;
-  opacity: 0; }
+/* line 316, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+.scores-bar-container li .score-complete, .scores-bar-container li .score-abbr {
+  display: inline-block;
+  white-space: nowrap; }
 
-/* line 309, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
-.scores-bar-container li .score-abbr {
-  width: auto;
-  opacity: 1; }
-
-/* line 314, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
+/* line 321, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
 .scores-bar-container li.active {
-  background-color: #FFF;
-  border-radius: 0 0 4px 4px; }
-
-/* line 319, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
-.scores-bar-container li.active .score-complete {
-  width: auto;
-  opacity: 1;
-  background-color: #fff; }
-
-/* line 325, /Users/sean/Development/cannuk/middleman/cales-magic-numbers/source/stylesheets/all.css.scss */
-.scores-bar-container li.active .score-abbr {
-  width: 0px;
-  opacity: 0; }
+  background: white;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }

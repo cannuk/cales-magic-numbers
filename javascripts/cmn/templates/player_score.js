@@ -41,11 +41,7 @@
       
         __out.push(__sanitize("" + this.playerName + ": " + this.score));
       
-        __out.push('</div>\n<div class="score-abbr">');
-      
-        __out.push(__sanitize("P" + this.playerNumber + ": " + this.score));
-      
-        __out.push('</div>\n');
+        __out.push(' points</div>\n');
       
       }).call(this);
       

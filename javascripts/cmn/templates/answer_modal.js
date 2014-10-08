@@ -49,7 +49,7 @@
       
         __out.push(__sanitize(this.points));
       
-        __out.push('</span>\n    </div>\n    <div class="total row">\n        <div class="pull-right">\n            <input class="form-control" type="text" id="total_answer"/>\n        </div>\n    </div>\n    <div class="row">\n        <div class="">\n            <button class="btn btn-answer">Answer</button>\n        </div>\n    </div>\n</div>\n');
+        __out.push('</span>\n    </div>\n    <div class="total row">\n        <div class="pull-right">\n            <input class="form-control" type="text" id="total_answer"/>\n        </div>\n    </div>\n    <div class="row">\n        <div class="btn-answer-wrapper">\n            <button class="btn btn-lg btn-primary btn-answer">Answer</button>\n        </div>\n    </div>\n</div>\n');
       
       }).call(this);
       
