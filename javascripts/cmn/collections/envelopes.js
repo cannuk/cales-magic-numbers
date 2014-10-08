@@ -42,7 +42,7 @@
       return this.on("change:open", this.changeOpen, this);
     };
 
-    Envelopes.prototype.changeOpen = function() {
+    Envelopes.prototype.allOpen = function() {
       var negativeOpened, positiveOpened;
       negativeOpened = this.select((function(_this) {
         return function(envelope) {
@@ -56,8 +56,12 @@
       })(this));
       console.log("negativeOpened = " + negativeOpened.length + " @length = " + this.length);
       console.log("positiveOpened = " + positiveOpened.length + " @length = " + this.length);
-      if (negativeOpened.length === (this.length / 2) || positiveOpened.length === (this.length / 2)) {
-        return this.trigger("envelopes:opened");
+      return negativeOpened.length === (this.length / 2) || positiveOpened.length === (this.length / 2);
+    };
+
+    Envelopes.prototype.changeOpen = function() {
+      if (this.allOpen()) {
+        return this.trigger("all:opened");
       }
     };
 

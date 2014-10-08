@@ -37,11 +37,15 @@
     }
     (function() {
       (function() {
-        __out.push('<div class="score-complete">');
+        __out.push('<div class="score-complete"><span class="player">');
       
-        __out.push(__sanitize("" + this.playerName + ": " + this.score));
+        __out.push(__sanitize(this.playerName));
       
-        __out.push(' points</div>\n');
+        __out.push(':</span> <span class="score">');
+      
+        __out.push(__sanitize(this.score));
+      
+        __out.push(' points</span></div>\n');
       
       }).call(this);
       

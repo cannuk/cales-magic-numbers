@@ -60,7 +60,7 @@
       return this.on("change:open", this.changeOpen, this);
     };
 
-    Envelopes.prototype.changeOpen = function() {
+    Envelopes.prototype.allOpen = function() {
       var negativeOpened, positiveOpened;
       negativeOpened = this.select((function(_this) {
         return function(envelope) {
@@ -74,8 +74,12 @@
       })(this));
       console.log("negativeOpened = " + negativeOpened.length + " @length = " + this.length);
       console.log("positiveOpened = " + positiveOpened.length + " @length = " + this.length);
-      if (negativeOpened.length === (this.length / 2) || positiveOpened.length === (this.length / 2)) {
-        return this.trigger("envelopes:opened");
+      return negativeOpened.length === (this.length / 2) || positiveOpened.length === (this.length / 2);
+    };
+
+    Envelopes.prototype.changeOpen = function() {
+      if (this.allOpen()) {
+        return this.trigger("all:opened");
       }
     };
 
@@ -349,7 +353,7 @@
       }
       s = document.createElement("style");
       s.type = "text/css";
-      s.innerHTML = ".envelope{height: " + e.h + "px; width: " + e.w + "px;} .envelope .flap,.envelope:after{border-width: " + (Math.round(e.h / 2)) + "px " + (Math.round(e.w / 2)) + "px} .envelope .paper{ width: " + (Math.round(e.w - 12)) + "px; height: " + (e.h - 20) + "px; }";
+      s.innerHTML = ".envelope{height: " + e.h + "px; width: " + e.w + "px;} .envelope .flap,.envelope:after{border-width: " + (Math.round(e.h / 2)) + "px " + (Math.round(e.w / 2)) + "px} .envelope .paper{ width: " + (Math.round(e.w - 12)) + "px; height: " + (e.h - 20) + "px; } .envelopes-container .envelope-wrapper{ margin-top: " + (Math.round(e.h / 2) + 1) + "px}";
       return $("body").append($(s));
     };
 
@@ -425,7 +429,7 @@
 
 }).call(this);
 (function() {
-  var game, _WINNING_MESSAGE, _WINNING_SCORE, _messageTimeout, _successMessages;
+  var game, _WINNING_SCORE, _answerModalOpen, _messageTimeout, _successMessages;
 
   game = new Backbone.Marionette.Application();
 
@@ -433,9 +437,9 @@
 
   _successMessages = ["Good Job!", "Way to go!", "Awesome!", "Perfect!", "Fantastic!", "That's right!", "You got it!"];
 
-  _WINNING_MESSAGE = "Congratulations you win!";
-
   _messageTimeout = null;
+
+  _answerModalOpen = false;
 
   game.addRegions({
     main: ".main",
@@ -474,13 +478,9 @@
     return window.scrollTo(0, 0);
   };
 
-  game.createEnvelopes = function(options) {
-    var players;
-    players = options.players;
-    if (players) {
-      this.envelopes.reset(this.generateEnvelopes());
-      return this.showEnvelopes();
-    }
+  game.createEnvelopes = function() {
+    this.envelopes.reset(this.generateEnvelopes());
+    return this.showEnvelopes();
   };
 
   game.generateEnvelopes = function() {
@@ -542,8 +542,7 @@
   };
 
   game.addInitializer(function(options) {
-    this.envelopes = new CMN.Envelopes();
-    return this.envelopes.on("envelopes:opened", this.generateEnvelopes, this);
+    return this.envelopes = new CMN.Envelopes();
   });
 
   game.addInitializer(function(options) {
@@ -563,6 +562,9 @@
 
   game.envelopeClick = function(e, f) {
     var player;
+    if (_answerModalOpen) {
+      return;
+    }
     player = this.getCurrentPlayer();
     if (player.get("score") < _WINNING_SCORE && e.model.get("action") === "negative") {
       return this.showMessage("Choose a <i class=\"icon icon-plus-outline\"></i> envelope", 2000);
@@ -586,15 +588,21 @@
     });
     this.answerModalView.on("answer:correct", ((function(_this) {
       return function() {
-        var winner;
+        var winner, _WINNING_MESSAGE;
         _this.answerModal.close;
+        _answerModalOpen = false;
+        if (_this.envelopes.allOpen()) {
+          _this.createEnvelopes();
+        }
         _this.answerModal.$el.css("display", "none");
         _this.updatePlayerScore(scoreModel);
         winner = _this.checkForWinner();
         if (winner) {
+          player = _this.getCurrentPlayer();
+          _WINNING_MESSAGE = "Congratulations " + (player.get("name")) + ", You Win!";
           _this.showMessage(_WINNING_MESSAGE);
           return setTimeout((function() {
-            return _this.selectPlayers();
+            return _this.restart();
           }), 3000);
         } else {
           _this.showSuccessMessage();
@@ -602,6 +610,7 @@
         }
       };
     })(this)));
+    _answerModalOpen = true;
     this.answerModal.show(this.answerModalView);
     return this.answerModal.$el.css("display", "block");
   };
@@ -611,7 +620,10 @@
   });
 
   game.restart = function() {
-    this.selectPlaers();
+    this.selectPlayersView = new CMN.Views.ChoosePlayers();
+    this.selectPlayersView.on("playersselected", this.createPlayers, this);
+    this.selectPlayersView.on("playersselected", this.createEnvelopes, this);
+    this.selectPlayers();
     return this.scores.close();
   };
 
