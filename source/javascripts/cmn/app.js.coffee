@@ -5,7 +5,7 @@
 
 game = new Backbone.Marionette.Application();
 
-_WINNING_SCORE = 21
+_WINNING_SCORE = 20
 _successMessages = [
   "Good Job!"
   "Way to go!"
