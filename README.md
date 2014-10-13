@@ -1,4 +1,4 @@
-cales-magic-numbers
+Cale's Magic Numbers
 ===================
 
 Cale's magic numbers is a math based computer game 100% conceived of by my 7 year old son. I was so proud of him for thinking up the rules of the game by himself that I created a web based version. You can play the game @ http://cannuk.github.io/cales-magic-numbers.
